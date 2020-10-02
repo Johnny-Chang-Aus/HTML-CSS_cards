@@ -1,0 +1,284 @@
+$shadow_gray : #cccccc;
+$lightblue : #368be3;
+$blue : #0571ff;
+$red : #e33c36;
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    padding: 30px;
+    background-color: #e8f0ff;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+}
+.card {
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 20px 20px $shadow_gray;
+    margin: 20px;
+    img {width: 100%; height: 100%;}
+    &.xs {
+        width: 150px;
+        height: 115px;
+    }
+    &.sm {
+        width: 150px;
+        height: 260px;
+    }
+    &.md {
+        width: 340px;
+        height: 260px;
+    }
+    &.lg {
+        width: 340px;
+        height: 400px;
+    }
+    &.xl {
+        width: 720px;
+        height: 400px;
+    }
+    &.sm--row {
+        width: 300px;
+        height: 150px;
+    }
+}
+
+.card__ss {
+    margin: 20px;
+    width: 340px;
+    height: 400px;
+    background-size: cover;
+    border-radius: 10px;
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+
+.card__image {
+    &.ht190 {height: 190px;}
+    &.ht170 {height: 170px;}
+    &.ht130 {height: 130px;}
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
+.card__mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &.gray {background-color: #00000060;}
+    &.grayout {
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0),rgba(255,255,255,1));
+    }
+    &.underline-bl{border-bottom: 5px solid $blue;}
+    &.underline-rd {border-bottom: 5px solid $red;}
+}
+
+.card__label {
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    &.right {right: 20px;}
+    &.left {left: 20px;}
+    &.blue {background-color: $lightblue;}
+    &.red {background-color: $red;}
+    p{
+        margin: 5px 15px;
+        font-size: 12px;
+        color: white;
+    }
+}
+
+.card__text {
+    &.sm {margin: 15px;
+        h1 {font-size: 16px; margin: 5px;};
+        h2 {font-size: 12px; margin: 5px; color: #8f8e8e;};
+    }
+    &.md {margin: 15px 25px;
+        position: absolute;
+        bottom: 10px;
+        h1 {font-size: 24px; margin: 5px; color: white;}
+        h2 {font-size: 14px; margin: 5px; color: white;}
+    }
+    &.md-gr {margin: 20px;
+        h1 {font-size: 24px; margin: 5px; color: black;}
+        h2 {font-size: 14px; margin: 5px; color: #999999;}
+        h3 {font-size: 20px; margin: 15px 0px; color: black;};
+        p {font-size: 16px; margin-top: 10px; color: #999999; line-height: 30px;}
+    }
+    &.centersm {margin: 0px; padding: 20px;
+        h1 {font-size: 24px; text-align: center; margin: 5px;};
+        h2 {font-size: 14px; text-align: center; color:#ccc ; margin: 5px;};
+        h3 {font-size: 14px; text-align: center; color: $lightblue; margin: 5px;}
+    }
+    &.article {
+        height: 135px;
+        overflow: hidden;
+        position: relative;
+        padding: 5px;
+    }
+    &.down {
+        position: absolute;
+        bottom: -50px;
+        padding: 20px;
+    }
+}
+
+.card__icons{
+    position: absolute;
+    
+    
+    &.two-icons {
+        width: 70px;
+        height: 20px;
+        display: inline-flex;
+        top: 20px;
+        right: 10px;
+    }
+    &.top {top: 20px;}
+    &.down {bottom: 10px;}
+    &.right {right: 20px;}
+
+}
+
+.icon__heart {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    img{
+        width: 40px;
+        opacity: 0.2;
+    }
+}
+
+.icon__play {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.icon__upload {
+    width: 50px;
+    height: 50px;
+}
+
+.icon__more {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    &.up {top: 20px;}
+    &.down {bottom: 20px;}
+}
+
+.reviews {
+    font-size: 8px;
+    color: #999999;
+    line-height: 1.58;
+    span {
+        background-size: 13px 12px;
+        height: 13px;
+        top: 1px;
+        width: 65px;
+    }
+}
+
+.star {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAmCAQAAAAYCMGrAAAA+klEQVR4AcWV4cbtMBBFF0MIVUopoVSrhDDv/3gf/RFRpzdNOty1HiBO99mzeYWgCMZMKCPGrCgrxiSUhCkDeukxJKCXAUMiehkxw6FZhxEzmp0x4kCzByYISqlYdal0supS6WrVpdLEK0YSamJiJOPY0c/uOG4s6CcXfuKJaJcRzyNCQJsNiF1sRTR1hP11NNJ8RCrONOPRf+r7J+TZgQ5CNfMOYvW/2YxDqzqA/57+gVY9eiakrnyZEGXDsaE3p/4JScwPX3rtnZATDxnPWT7X16XAHaH8HWNrlxJD9TyGti5tCM84zpZe+RxNjeX9tZqLaGoMxN/P/wHP5Vw+8ZxnEQAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    span {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAmBAMAAABALxQTAAAAFVBMVEVMaXH4twP4twP4twP4twP4twP4twP7w8S/AAAAB3RSTlMAFv5uPpvQloUsTQAAAMFJREFUeAGE0TEOgzAMQFEXoDNiYC6/wFxxAsTADDkB5f6HqNRENXUi8TYiRfnY8lNXkjBOkuBWSeAhsYJOYiW9xO4MEqshkTbCSyIH7GLdgFasHHgmwkikZQD6OROZRG4Hxju8o/TNhbNhCqkOxaZDVKdxNnq/EjUS/A2o0PuXpyVeb9bjDWY9QSWXDQfBbtbjtWY9bM4sqfx+5yYt8wNcAFEzrGGkk5668KsFrKewPtQ3aFqh8WOnYZ+lIBQkgykAWk8rlAqcHfQAAAAASUVORK5CYII=);
+        background-repeat: repeat-x;
+        display: block;
+    }
+}
+
+.sub__container {
+    margin: 10px;
+    border: 2px dashed #cccccc;
+    border-radius: 10px;
+    height: 240px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.btn {
+    &.sm {font-size: 12px;};
+    &.lg {font-size: 16px;};
+    &.zero {
+        background-color: transparent;
+        border-color: transparent;}
+    &.blue {background-color: $blue;}
+    &.round {
+        border-radius: 30px;
+        width: 130px;
+        height: 40px;
+        position: absolute;
+        bottom: 40px;
+        right: 115px;
+    }
+    &.wide {
+        width: 315px;
+    height: 50px;
+    border-radius: 5px;
+    border-color: transparent;
+    margin: 12px;
+    bottom: 0px;
+    position: absolute;
+    }
+    &.circle {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+    }
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-color: transparent;
+}
